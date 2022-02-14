@@ -16,11 +16,6 @@ export function ShowInteractionModal() {
 export default function InteractionModal({close}) {
   const [state, {retryAudio, setProps}] = useJam();
 
-  set(state, 'audioPlayError', false);
-  setProps({userInteracted: true});
-  retryAudio();
-  close();
-
   return (
     <Modal close={close}>
       <h1>Allow playing sound</h1>
